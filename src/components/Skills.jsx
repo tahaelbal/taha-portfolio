@@ -38,7 +38,7 @@ const skillGroups = [
       "SQLite",
       "PostgreSQL",
       "Prisma ORM",
-      "Authentication",
+      "Auth.js",
     ],
   },
   {
@@ -50,8 +50,8 @@ const skillGroups = [
       "Computer Vision",
       "Machine Learning",
       "Deep Learning",
-      "Pandas",
-      "NumPy",
+      "OpenCV",
+      "Pytorch",
       "Data Analysis",
     ],
   },
@@ -62,7 +62,7 @@ const skillGroups = [
     skills: [
       "SEO Optimization",
       "Digital Marketing",
-      "Analytics",
+      "Web Analytics",
       "Content Strategy",
     ],
   },
@@ -77,6 +77,7 @@ const skillGroups = [
       "Vercel",
       "Linux",
       "API Testing",
+      "CI/CD",
     ],
   },
   {
@@ -85,10 +86,9 @@ const skillGroups = [
     icon: BarChart3,
     skills: [
       "Power BI",
-      "Python",
+      "Numpy",
       "Pandas",
       "Talend",
-      "Excel",
       "Data Visualization",
     ],
   },

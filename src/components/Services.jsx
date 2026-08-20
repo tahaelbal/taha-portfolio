@@ -4,36 +4,92 @@ import {
   ServerCog,
   Bot,
   Database,
+  Search,
+  BarChart3,
 } from "lucide-react";
 
 const services = [
   {
-    title: "Full-Stack Web Development",
+    title: "Full-Stack Development",
     description:
-      "Modern, responsive web platforms built from frontend interfaces to backend APIs and database architecture.",
-    tags: ["React", "Next.js", "TypeScript"],
+      "End-to-end web applications combining modern frontend experiences with scalable backend APIs and reliable database architecture.",
+    tags: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Prisma",
+    ],
     icon: Code2,
   },
   {
     title: "Backend & APIs",
     description:
-      "Robust REST APIs and backend systems designed for performance, scalability, security, and maintainability.",
-    tags: ["Python", "FastAPI", "Node.js"],
+      "High-performance backend systems and REST APIs built for scalability, security, maintainability, and reliable data processing.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "Node.js",
+      "REST APIs",
+      "JWT",
+      "Authentication",
+    ],
     icon: ServerCog,
   },
   {
     title: "AI & Data Engineering",
     description:
-      "AI-powered applications and data solutions combining machine learning, computer vision, automation, and intelligent workflows.",
-    tags: ["Python", "YOLOv8", "AI / ML"],
+      "Intelligent solutions combining machine learning, computer vision, automation, and data engineering to solve real-world problems.",
+    tags: [
+      "Python",
+      "YOLOv8",
+      "Machine Learning",
+      "Deep Learning",
+      "Pandas",
+      "NumPy",
+    ],
     icon: Bot,
   },
   {
     title: "Databases & Infrastructure",
     description:
-      "Reliable data architecture and deployment environments built for scalable applications and production workloads.",
-    tags: ["PostgreSQL", "MongoDB", "Docker"],
+      "Reliable data architectures and deployment environments designed for scalable applications, production workloads, and secure infrastructure.",
+    tags: [
+      "PostgreSQL",
+      "MongoDB",
+      "SQLite",
+      "Docker",
+      "Linux",
+      "Cloud",
+    ],
     icon: Database,
+  },
+  {
+    title: "SEO & Performance",
+    description:
+      "Technical SEO and performance optimization focused on search visibility, fast loading times, accessibility, and a better user experience.",
+    tags: [
+      "SEO Optimization",
+      "Technical SEO",
+      "Web Analytics",
+      "Core Web Vitals",
+    ],
+    icon: Search,
+  },
+  {
+    title: "Data Analytics & Visualization",
+    description:
+      "Turning raw data into actionable insights through analysis, dashboards, reporting, and clear interactive visualizations.",
+    tags: [
+      "Power BI",
+      "Python",
+      "Pandas",
+      "Talend",
+      "Excel",
+      "Data Visualization",
+    ],
+    icon: BarChart3,
   },
 ];
 
@@ -43,7 +99,7 @@ export default function Services() {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
 
         {/* Section Header */}
-        <div className="mb-8 max-w-4xl">
+        <div className="mb-8 max-w-5xl">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.45em] text-sky-400">
             Services
           </p>
@@ -56,13 +112,14 @@ export default function Services() {
           </h2>
 
           <p className="mt-3 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">
-            I build reliable digital solutions that combine modern
-            interfaces, scalable backend systems, AI and data.
+            I build reliable digital solutions combining modern interfaces,
+            scalable backend systems, AI, data, and performance-focused
+            experiences.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 gap-px overflow-hidden border border-slate-800 bg-slate-800 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-px overflow-hidden border border-slate-800 bg-slate-800 md:grid-cols-2 lg:grid-cols-3">
 
           {services.map((service, index) => {
             const Icon = service.icon;
@@ -75,18 +132,20 @@ export default function Services() {
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{
                   duration: 0.5,
-                  delay: index * 0.08,
+                  delay: index * 0.06,
                 }}
                 className="
                   group
                   relative
-                  min-h-[270px]
+                  flex
+                  min-h-[330px]
+                  flex-col
                   bg-slate-950
                   p-6
-                  lg:p-7
                   transition-all
                   duration-500
                   hover:bg-slate-900
+                  lg:p-7
                 "
               >
 
@@ -128,11 +187,11 @@ export default function Services() {
                       group-hover:bg-sky-400/15
                     "
                   >
-                    <Icon size={22} />
+                    <Icon size={22} strokeWidth={1.8} />
                   </div>
 
                   <span className="text-xs font-semibold tracking-[0.25em] text-slate-600">
-                    0{index + 1}
+                    {String(index + 1).padStart(2, "0")}
                   </span>
 
                 </div>
@@ -144,42 +203,49 @@ export default function Services() {
                     {service.title}
                   </h3>
 
-                  <p className="mt-3 max-w-xl text-base leading-6 text-slate-400">
+                  <p className="mt-3 max-w-xl text-sm leading-6 text-slate-400 lg:text-base">
                     {service.description}
                   </p>
 
                 </div>
 
                 {/* Divider */}
-                <div className="mt-5 h-px w-full bg-slate-800 transition-colors duration-300 group-hover:bg-sky-400/30" />
+                <div
+                  className="
+                    mt-auto
+                    pt-6
+                  "
+                >
+                  <div className="h-px w-full bg-slate-800 transition-colors duration-300 group-hover:bg-sky-400/30" />
 
-                {/* Technologies */}
-                <div className="mt-4 flex flex-wrap gap-2">
+                  {/* Technologies */}
+                  <div className="mt-4 flex flex-wrap gap-2">
 
-                  {service.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="
-                        border
-                        border-slate-800
-                        bg-slate-900/70
-                        px-2.5
-                        py-1.5
-                        text-[11px]
-                        font-semibold
-                        uppercase
-                        tracking-[0.15em]
-                        text-slate-400
-                        transition-all
-                        duration-300
-                        group-hover:border-slate-700
-                        group-hover:text-slate-200
-                      "
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                    {service.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="
+                          border
+                          border-slate-800
+                          bg-slate-900/70
+                          px-2.5
+                          py-1.5
+                          text-[10px]
+                          font-semibold
+                          uppercase
+                          tracking-[0.13em]
+                          text-slate-400
+                          transition-all
+                          duration-300
+                          group-hover:border-slate-700
+                          group-hover:text-slate-200
+                        "
+                      >
+                        {tag}
+                      </span>
+                    ))}
 
+                  </div>
                 </div>
 
               </motion.article>
