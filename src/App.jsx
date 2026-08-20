@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ChatWidget from "./components/ChatWidget";
 import Skills from "./components/Skills";
+import GitHubTasks from "./components/GitHubTasks";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Work />
       <Skills />
       <Experience />
+      <GitHubTasks />
       
       <Contact />
       <Footer />

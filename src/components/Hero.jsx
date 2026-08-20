@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { SiReact, SiNextdotjs, SiFastapi, SiPython, SiDocker, SiPostgresql } from "react-icons/si";
 import { TbRobot } from "react-icons/tb";
-import profileImage from "../assets/images/taha.jpeg";
+import profileImage from "../assets/images/taha.png";
 
 const techStack = [
   { name: "React", icon: SiReact, color: "#61DAFB" },

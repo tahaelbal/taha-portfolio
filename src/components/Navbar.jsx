@@ -8,6 +8,7 @@ const links = [
   { name: "Services", to: "services" },
   { name: "Work", to: "work" },
   { name: "Education", to: "education" },
+  { name: "GitHub", to: "github" },
   { name: "Contact", to: "contact" },
 ];
 
