@@ -67,6 +67,8 @@ export default function Navbar() {
           className="rounded-full border border-slate-700 p-2 text-white lg:hidden"
           onClick={() => setIsOpen((open) => !open)}
           aria-label="Toggle navigation"
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -76,6 +78,7 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
+          id="mobile-navigation"
           className="border-t border-white/10 bg-slate-950/95 lg:hidden"
         >
           <ul className="flex flex-col items-center gap-7 py-8">

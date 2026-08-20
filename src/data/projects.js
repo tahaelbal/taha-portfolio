@@ -41,9 +41,7 @@ export const projects = [
       "Complete vehicle rental management platform for managing vehicles, customers and reservations.",
     longDescription:
       "A .NET application with administration features, rental management, payments and database integration.",
-    image: "/projects/myrent.png",
     alt: "MyRent vehicle rental platform screenshot",
-    link: "https://github.com/yourusername/myrent",
     stack: [".NET", "C#", "SQL Server", "Entity Framework"],
   },
   {

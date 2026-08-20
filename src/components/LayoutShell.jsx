@@ -11,9 +11,10 @@ export default function LayoutShell({ children }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.6 }}
+        aria-label="Back to About section"
         className="fixed bottom-6 right-6 hidden rounded-full border border-slate-700 bg-slate-900/80 p-3 text-slate-200 shadow-lg shadow-black/20 backdrop-blur md:flex"
       >
-        <ArrowDown className="rotate-180" size={18} />
+        <ArrowDown aria-hidden="true" className="rotate-180" size={18} />
       </motion.a>
     </div>
   );

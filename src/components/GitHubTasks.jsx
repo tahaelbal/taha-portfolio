@@ -56,7 +56,7 @@ function buildWeeksForYear(contributions, year) {
   return weeks;
 }
 
-function getMonthMarkers(weeks, year) {
+function getMonthMarkers(weeks) {
   return weeks.map((week, weekIndex) => {
     for (const day of week) {
       if (!day.isInSelectedYear) continue;
@@ -148,7 +148,7 @@ export default function GitHubTasks() {
       return [];
     }
 
-    return getMonthMarkers(weeks, selectedYear);
+    return getMonthMarkers(weeks);
   }, [weeks, selectedYear]);
 
   const yearlyTotal = totalsByYear[String(selectedYear)] ?? selectedYearContributions.reduce((sum, day) => sum + (day.count || 0), 0);
@@ -239,6 +239,8 @@ export default function GitHubTasks() {
                           <div
                             key={day.date}
                             title={`${day.count} contribution${day.count > 1 ? "s" : ""} on ${day.date}`}
+                            aria-label={`${day.count} contribution${day.count > 1 ? "s" : ""} on ${day.date}`}
+                            role="img"
                             className={`h-3 w-3 rounded-[2px] border border-[#30363d]/40 ${day.isInSelectedYear ? getContributionColor(day.level) : "bg-transparent"}`}
                           />
                         ))}

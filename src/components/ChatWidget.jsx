@@ -120,9 +120,10 @@ export default function ChatWidget() {
             </div>
             <button
               onClick={() => setIsOpen(false)}
+              aria-label="Close chat"
               className="rounded-full p-2 text-cyan-100/60 transition hover:bg-cyan-100/10 hover:text-white"
             >
-              <X size={18} />
+              <X aria-hidden="true" size={18} />
             </button>
           </div>
 
@@ -161,7 +162,9 @@ export default function ChatWidget() {
 
           <form onSubmit={handleSubmit} className="border-t border-cyan-100/10 bg-slate-900/35 p-3">
             <div className="flex items-center gap-2 rounded-full border border-slate-500/40 bg-slate-900/70 px-3 py-2 backdrop-blur">
+              <label htmlFor="chat-message" className="sr-only">Ask Taha about his work</label>
               <input
+                id="chat-message"
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
                 placeholder="Ask about my work..."
@@ -170,9 +173,10 @@ export default function ChatWidget() {
               <button
                 type="submit"
                 disabled={isLoading}
+                aria-label="Send message"
                 className="rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 p-2 text-white shadow-[0_10px_18px_rgba(56,189,248,0.4)] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-45"
               >
-                <Send size={16} />
+                <Send aria-hidden="true" size={16} />
               </button>
             </div>
           </form>

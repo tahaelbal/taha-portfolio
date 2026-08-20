@@ -60,10 +60,7 @@ export default function Hero() {
             </p>
             <div className="mt-6 space-y-3">
               <h1 className="text-6xl font-serif italic text-white sm:text-7xl lg:text-[7rem]">
-                Taha
-              </h1>
-              <h1 className="text-6xl font-black tracking-tight text-slate-500 sm:text-7xl lg:text-[7rem]">
-                El Bal.
+                Taha <span className="font-black tracking-tight text-slate-500">El Bal.</span>
               </h1>
             </div>
             <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400 sm:text-xl">
@@ -105,6 +102,10 @@ export default function Hero() {
                   src={profileImage}
                   alt="Taha El Bal portrait"
                   className="h-[560px] w-full object-cover"
+                  width="420"
+                  height="560"
+                  fetchPriority="high"
+                  decoding="async"
                 />
 
                 <div className="absolute right-0 top-5 z-10 bg-sky-600 px-5 py-3">
@@ -115,7 +116,7 @@ export default function Hero() {
               </div>
 
               <div className="absolute -bottom-6 -left-6 z-10 rounded-2xl bg-white px-7 py-6 text-slate-950 shadow-2xl">
-                <h2 className="text-3xl font-bold">5+</h2>
+                <p className="text-3xl font-bold">5+</p>
                 <p className="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-slate-600">
                   Years learning
                 </p>
@@ -160,15 +161,15 @@ export default function Hero() {
 
           <div className="mt-10 grid gap-8 text-center md:grid-cols-3">
             <div>
-              <h2 className="text-3xl font-bold text-white">6+</h2>
+              <p className="text-3xl font-bold text-white">6+</p>
               <p className="mt-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Projects</p>
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-white">15+</h2>
+              <p className="text-3xl font-bold text-white">15+</p>
               <p className="mt-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Technologies</p>
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-white">100%</h2>
+              <p className="text-3xl font-bold text-white">100%</p>
               <p className="mt-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Passion</p>
             </div>
           </div>

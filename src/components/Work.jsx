@@ -108,6 +108,10 @@ export default function Work() {
                         src={project.image}
                         alt={project.alt ?? project.title}
                         className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        width="1280"
+                        height="800"
+                        loading="lazy"
+                        decoding="async"
                       />
                     ) : (
                       <div className="flex h-full w-full items-center justify-center bg-slate-900">
@@ -248,7 +252,7 @@ export default function Work() {
                     ) : (
                       <button type="button" className={primaryButton}>
                         View Project
-                        <ArrowUpRight size={18} className="transition-transform duration-300" />
+                        <ArrowUpRight aria-hidden="true" size={18} className="transition-transform duration-300" />
                       </button>
                     )}
 
@@ -312,6 +316,10 @@ export default function Work() {
               src={project.image}
               alt={project.alt ?? project.title}
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              width="1280"
+              height="800"
+              loading="lazy"
+              decoding="async"
             />
           ) : (
             <div className="flex h-full items-center justify-center bg-slate-900">
