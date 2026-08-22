@@ -162,7 +162,7 @@ export default function Navbar() {
                           </p>
 
                           <p className="text-xs text-slate-500">
-                            Full Stack Developer · AI & Data Engineer
+                            Full Stack Developer · AII & Data Engineer
                           </p>
                         </div>
                       </div>
