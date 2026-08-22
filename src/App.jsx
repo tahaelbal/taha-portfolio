@@ -22,7 +22,6 @@ function App() {
       <Skills />
       <Experience />
       <GitHubTasks />
-      
       <Contact />
       <Footer />
       <ChatWidget />

@@ -33,7 +33,7 @@ export default function Hero() {
       <div className="absolute right-0 top-0 h-[600px] w-[600px] rounded-full bg-blue-600/15 blur-[180px]" />
       <div className="absolute bottom-0 left-0 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[160px]" />
 
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-16">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-16 lg:gap-20">
         <div className="flex flex-col items-center justify-center gap-4 text-center lg:flex-row lg:justify-between lg:text-left">
           <div className="flex items-center gap-3 rounded-full border border-slate-700/80 px-6 py-3">
             <span className="h-3 w-3 rounded-full bg-emerald-500" />
@@ -41,6 +41,7 @@ export default function Hero() {
               Available for work
             </span>
           </div>
+          
 
           <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
             <MapPin size={16} />
@@ -58,16 +59,17 @@ export default function Hero() {
             <p className="text-sm font-semibold uppercase tracking-[0.45em] text-sky-400">
               FULL STACK DEVELOPER • AI & DATA ENGINEER
             </p>
-            <div className="mt-6 space-y-3">
-              <h1 className="text-6xl font-serif italic text-white sm:text-7xl lg:text-[7rem]">
-                Taha <span className="font-black tracking-tight text-slate-500">El Bal.</span>
+            <div className="mt-7 space-y-2">
+              <h1 className="text-6xl font-serif italic leading-[0.9] text-white sm:text-7xl lg:text-[7rem]">
+                <span className="block">Taha</span>
+                <span className="block font-sans font-black not-italic tracking-tight text-slate-500">El Bal.</span>
               </h1>
             </div>
-            <p className="mt-8 max-w-xl text-lg leading-8 text-slate-400 sm:text-xl">
+            <p className="mt-9 max-w-xl text-lg leading-8 text-slate-400 sm:text-xl">
               Engineering robust, scalable web platforms while building my future in AI & Data Engineering at IADATA.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-11 flex flex-col gap-4 sm:flex-row">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold uppercase tracking-[0.3em] text-slate-950 transition hover:bg-sky-400 hover:text-white"
@@ -88,10 +90,10 @@ export default function Hero() {
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex justify-center transform lg:justify-end lg:-translate-y-10"
+            className="flex translate-y-0 justify-center transform lg:justify-end lg:-translate-y-8"
           >
             {/* FIX: max-w-105 -> max-w-[420px] explicite */}
-            <div className="relative w-full max-w-[420px]">
+            <div className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[450px]">
               <div className="absolute inset-0 scale-110 rounded-full bg-sky-500/20 blur-[180px]" />
               <div className="absolute -left-5 -top-5 h-full w-full rounded-2xl border border-slate-700" />
               <div className="absolute left-5 top-5 h-full w-full rounded-2xl border-2 border-sky-500" />
@@ -101,21 +103,21 @@ export default function Hero() {
                 <img
                   src={profileImage}
                   alt="Taha El Bal portrait"
-                  className="h-[560px] w-full object-cover"
+                  className="h-[380px] w-full object-cover sm:h-[450px] lg:h-[500px]"
                   width="420"
                   height="560"
                   fetchPriority="high"
                   decoding="async"
                 />
 
-                <div className="absolute right-0 top-5 z-10 bg-sky-600 px-5 py-3">
-                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white">
+                <div className="absolute right-0 top-5 z-10 bg-sky-600 px-4 py-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white">
                     FULL STACK • AI & DATA
                   </p>
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 -left-6 z-10 rounded-2xl bg-white px-7 py-6 text-slate-950 shadow-2xl">
+              <div className="absolute -bottom-4 -left-2 z-10 rounded-2xl bg-white px-6 py-5 text-slate-950 shadow-2xl sm:bottom-[-20px] sm:left-[-20px]">
                 <p className="text-3xl font-bold">5+</p>
                 <p className="mt-2 text-xs font-semibold uppercase tracking-[0.3em] text-slate-600">
                   Years learning
