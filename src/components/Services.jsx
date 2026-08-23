@@ -16,7 +16,7 @@ const services = [
     tags: [
       "React",
       "Next.js",
-      "TypeScript",
+      "Javascript",
       "Tailwind CSS",
       "Node.js",
       "Prisma",
